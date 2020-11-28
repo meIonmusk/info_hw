@@ -2,8 +2,8 @@
 
 long long gcd(long long a, long long b)
 {
-    (a < 0) ? (a = -a) : (a = a);
-    (b < 0) ? (b = -b) : (b = b);
+    a = (a < 0) ? -a : a;
+    b = (b < 0) ? -b : b;
     return b ? gcd(b, a % b) : a;
 }
 
